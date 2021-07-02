@@ -3,11 +3,12 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Orders from "./components/Orders/Orders";
 import OrderDetails from "./components/OrderDetails/OrderDetails";
 import Home from "./components/Home/Home";
+import "./App.scss";
 
 export default function App() {
   return (
     <Router>
-      <div>
+      <div className="app">
         <nav>
           <ul>
             <li>
