@@ -22,7 +22,7 @@ export const OrderDetailsModal: React.FC<IProps> = ({
 }: IProps) => {
   const theme = useTheme();
   const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
-  const [open, setOpen] = React.useState(false);
+  const [ , setOpen] = React.useState(false);
 
   const handleClose = () => {
     setOpen(false);
