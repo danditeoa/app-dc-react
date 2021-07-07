@@ -8,11 +8,11 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableFooter from "@material-ui/core/TableFooter";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import { OrderDetailsModal } from "../OrderDetailsModal/OrderDetailsModal";
+import { useHistory } from "react-router-dom";
 
 function OrdersTable() {
   const { loading, error, data } = useQuery(GET_ORDERS);
-  const [orderDetailsModalIsOpen, setOrderDetailsModalIsOpen] = React.useState(false)
+  const history = useHistory();
 
   console.log(data);
   if (loading) {
@@ -23,17 +23,16 @@ function OrdersTable() {
     return <div>Error!</div>;
   }
 
-  const openDetails = () => {
-    setOrderDetailsModalIsOpen(true);
-  };
-
   return (
     <TableContainer component={Paper}>
       <Table>
         <TableBody>
           {data &&
             data.orders.map((order: any) => (
-              <TableRow key={order.id} onClick={openDetails}>
+              <TableRow key={order.customer._id} onClick={() => history.push({
+                pathname: '/order-details',
+                state: order 
+              })}>
                 <TableCell component="th" scope="row">
                   {order.store}
                 </TableCell>
@@ -50,11 +49,6 @@ function OrdersTable() {
           <TableRow>PAGINADOR VAI AQUI</TableRow>
         </TableFooter>
       </Table>
-      <OrderDetailsModal
-        modalIsOpen={orderDetailsModalIsOpen}
-        setModalIsOpen={setOrderDetailsModalIsOpen}
-        data={order}
-      />
     </TableContainer>
   );
 }
