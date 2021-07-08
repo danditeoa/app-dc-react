@@ -20,8 +20,6 @@ export const OrderDetails = ({
     items,
   } = data;
 
-  console.log("DATA", data);
-
   return (
     <div className="card">
       <BackButton />
