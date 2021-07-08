@@ -14,7 +14,6 @@ export interface Address {
     street: string;
 }
 
-
 export interface Payment {
     __typename: string;
     method: string;

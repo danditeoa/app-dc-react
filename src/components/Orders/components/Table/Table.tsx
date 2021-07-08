@@ -5,7 +5,6 @@ import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
-import TableFooter from "@material-ui/core/TableFooter";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
 import { useHistory } from "react-router-dom";
@@ -14,7 +13,6 @@ function OrdersTable() {
   const { loading, error, data } = useQuery(GET_ORDERS);
   const history = useHistory();
 
-  console.log(data);
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -45,9 +43,6 @@ function OrdersTable() {
               </TableRow>
             ))}
         </TableBody>
-        <TableFooter>
-          <TableRow>PAGINADOR VAI AQUI</TableRow>
-        </TableFooter>
       </Table>
     </TableContainer>
   );
