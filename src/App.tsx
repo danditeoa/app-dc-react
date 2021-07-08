@@ -3,10 +3,10 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
 } from "react-router-dom";
 import Orders from "./components/Orders/Orders";
 import { OrderDetails } from "./components/OrderDetails/OrderDetails";
+import FastfoodIcon from '@material-ui/icons/Fastfood';
 import "./App.scss";
 
 
@@ -15,11 +15,7 @@ export default function App() {
     <Router>
       <div>
         <nav>
-          <ul>
-            <li>
-              <Link to="/">Orders</Link>
-            </li>
-          </ul>
+          <FastfoodIcon />
         </nav>
         <div className="app">
           <Switch>

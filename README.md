@@ -1,12 +1,6 @@
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
 ## Address Book 📕
 
-O projeto foi feito com react e consume a api em graphql https://teste.deliverycenter.io/graphql
+O projeto foi feito com react e consome a api em graphql https://teste.deliverycenter.io/graphql
 
 ## Demo online 🕹️
 
@@ -17,15 +11,11 @@ clone o repositório e rode o comando
 ```yarn```
 ### Para iniciar o servidor
 ```yarn start```
-### Using Docker 🐋
-
-On root folder:
-
-```docker build -t addressbook .```
-```docker run -p 80:80 -d addressbook```
-
-The app will be running on [localhost](http://localhost/)
-
 ### To do list
 
 - testes unitários.
+- filtrar os pedidos na lista (busca).
+- edição e cadastro de novos pedidos.
+- paginação.
+- ~~rota para acessar a tela de detalhes.~~ 
+- ~~forma para retornar à lista.~~ 
