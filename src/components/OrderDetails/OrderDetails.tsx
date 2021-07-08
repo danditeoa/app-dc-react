@@ -26,7 +26,7 @@ export const OrderDetails = ({
           <p><b>Store:</b> {store} </p>
           <p><b>Customer:</b> {customer.name}</p>
           {items && items.map((item) => (
-          <p><b>Items:</b> {item.name } <b>Number:</b> {item.quantity } <b>Value:</b> {item.amount }</p>
+          <p key={item.__typename}><b>Items:</b> {item.name } <b>Number:</b> {item.quantity } <b>Value:</b> {item.amount }</p>
           ))}
           <p><b>Reference:</b> {reference}</p>
           <p><b>Delivery Fee:</b> {deliveryFee}</p>
@@ -48,7 +48,7 @@ export const OrderDetails = ({
               </ul> 
           </div>
           {payments && payments.map((payment) => (
-          <p><b>Payment:</b> {payment.method } <b>Value:</b> {payment.amount }</p>
+          <p key={payment.__typename}><b>Payment:</b> {payment.method } <b>Value:</b> {payment.amount }</p>
           ))}
         </div>
       </div>
