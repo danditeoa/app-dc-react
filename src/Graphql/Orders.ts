@@ -10,6 +10,14 @@ export const GET_ORDERS = gql`
         _id
         name
       }
+      address {
+        number
+        neighborhood
+        complement
+        city
+        state
+        street
+      }
       reference
       amount
       deliveryFee
@@ -20,6 +28,8 @@ export const GET_ORDERS = gql`
       }
       items {
         name
+        quantity
+        amount
       }
     }
   }
