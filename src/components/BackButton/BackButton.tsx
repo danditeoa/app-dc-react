@@ -1,11 +1,12 @@
 import React from 'react'
 import { useHistory } from "react-router-dom";
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import "./back-button.scss";
 
 function BackButton() {
   const history = useHistory();
   return (
-    <div onClick={()=> history.goBack()}>
+    <div className="back" onClick={()=> history.goBack()}>
       <ArrowBackIcon />       
     </div>
   )

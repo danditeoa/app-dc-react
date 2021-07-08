@@ -27,7 +27,7 @@ function OrdersTable() {
         <TableBody>
           {data &&
             data.orders.map((order: any) => (
-              <TableRow key={order.customer._id} onClick={() => history.push({
+              <TableRow className="cursor" key={order.customer._id} onClick={() => history.push({
                 pathname: '/order-details',
                 state: order 
               })}>
