@@ -9,10 +9,8 @@ export const OrderDetails = ({
 }: RouteComponentProps<{}, {}, Order>) => {
   const data = location.state;
   const {
-    externalReference,
     store,
     customer,
-    address,
     reference,
     amount,
     deliveryFee,
